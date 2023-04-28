@@ -8,7 +8,8 @@
     "dev": "nodemon",
     "start": "ts-node build && node ./build/index.js",
     "db:format": "prisma format",
-    "db:migrate": "prisma migrate dev"
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "prisma db seed"
   },
   "keywords": [],
   "author": "Jhonatan Oliveira, https://jhonatanoliveira.com",
@@ -26,5 +27,8 @@
     "@prisma/client": "^4.13.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2"
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seeds.ts"
   }
 }
